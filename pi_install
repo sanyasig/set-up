@@ -1,0 +1,75 @@
+install nginx
+
+copy nginx config config
+
+intall vim 
+
+wget https://nodejs.org/dist/v4.3.2/node-v4.3.2-linux-armv6l.tar.gz 
+tar -xvf node-v4.3.2-linux-armv6l.tar.gz 
+cd node-v4.3.2-linux-armv6l
+
+sudo cp -R * /usr/local/
+
+sudo apt-get install nodejs npm
+
+copy
+copy letsencry /opt and /etc
+https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-16-04
+
+certificare renwe
+
+wget https://dl.eff.org/certbot-auto
+chmod a+x ./certbot-auto
+sudo ./certbot-auto help
+
+
+sudo nano /etc/nginx/sites-available/default
+Find the existing server_name line:
+
+/etc/nginx/sites-available/default
+server_name _;
+Replace the _ underscore with your domain name:
+
+/etc/nginx/sites-available/default
+server_name example.com www.example.com;
+Save the file and quit your editor. Verify the syntax of your configuration edits with:
+
+sudo systemctl reload nginx
+
+sudo ./certbot-auto certonly -a webroot --webroot-path=/var/www/html -d nanihome.duckdns.org -d www.nanihome.duckdns.org
+
+ if strict error
+sudo ln -sf /usr/local/n/versions/node/6.0.0/bin/node /usr/bin/node  
+
+irsend SEND_ONCE SAMSUNG_AA59-00600A SAMSUNG_AA59-00600A
+
+sudo cp /home/pi/ hardware.conf 
+sudo cp /home/pi/lircd.conf lircd.conf 
+sudo cp /home/pi/lircmd.conf lircmd.conf 
+
+
+sudo cp work/Home_Contorller/scripts/piStartUp.sh  /etc/init.d/
+sudo update-rc.d piStartUp.sh defaults 100
+
+IP Emittor pin - GPIO-22
+
+add-boot-rc
+
+add to file /etc/rc.local
+mount /dev/sda1 /home/nanipi/drive/ -o uid=pi,gid=pi
+/usr/sbin/lircd -d /dev/lirc0
+
+
+git clone https://github.com/magicmonkey/lifxjs.git
+sudo apt-get install mosquitto mosquitto-clients python-mosquitto
+sudo pip install paho-mqtt
+sudo apt-get install python-pip
+sudo pip install pydhcplib
+sudo apt install android-tools-adb android-tools-fastboot
+
+
+
+
+
+
+/usr/bin/python /home/nanipi/work/Home_Contorller/scripts/dash.py
